@@ -4,11 +4,13 @@ public class MarsRover
 {
     private readonly int x;
     private readonly int y;
+    private readonly string direction;
 
-    public MarsRover(int x, int y, string s)
+    public MarsRover(int x, int y, string direction)
     {
         this.x = x;
         this.y = y;
+        this.direction = direction;
     }
 
     public string GetPosition()
@@ -18,6 +20,6 @@ public class MarsRover
 
     public string GetDirection()
     {
-        return string.Empty;
+        return direction;
     }
 }
