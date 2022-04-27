@@ -46,11 +46,13 @@ namespace MarsRoverKata.Tests
         [Test]
         public void move_backward_one_unit_when_facing_north()
         {
-            var rover = new MarsRover(2, 2, "N");
+            var randomizer = new Random(DateTime.Now.Millisecond);
+            var randomY = randomizer.Next(2, 5);
+            var rover = new MarsRover(2, randomY, "N");
 
             var result = rover.ExecuteCommand("b.1");
 
-            result.Should().Be("2,3");
+            result.Should().Be($"2,{randomY+1}");
         }
     }
 }
