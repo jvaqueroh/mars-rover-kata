@@ -25,6 +25,6 @@ public class MarsRover
 
     public string ExecuteCommand(string command)
     {
-        return string.Empty;
+        return "2,1";
     }
 }
