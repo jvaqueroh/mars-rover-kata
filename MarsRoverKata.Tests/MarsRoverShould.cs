@@ -20,7 +20,7 @@ namespace MarsRoverKata.Tests
 
             result.Should().Be("1,1");
         }
-        
+
         [Test]
         public void return_current_direction()
         {
@@ -29,6 +29,16 @@ namespace MarsRoverKata.Tests
             var result = rover.GetDirection();
 
             result.Should().Be("N");
+        }
+
+        [Test]
+        public void move_forward_one_unit_when_facing_north()
+        {
+            var rover = new MarsRover(2, 2, "N");
+
+            var result = rover.ExecuteCommand("f.1");
+            
+            result.Should().Be("2,1");
         }
     }
 }

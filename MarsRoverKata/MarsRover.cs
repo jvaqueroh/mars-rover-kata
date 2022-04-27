@@ -22,4 +22,9 @@ public class MarsRover
     {
         return direction;
     }
+
+    public string ExecuteCommand(string command)
+    {
+        return string.Empty;
+    }
 }
