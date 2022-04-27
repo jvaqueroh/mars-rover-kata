@@ -40,5 +40,15 @@ namespace MarsRoverKata.Tests
             
             result.Should().Be("2,1");
         }
+
+        [Test]
+        public void move_backward_one_unit_when_facing_north()
+        {
+            var rover = new MarsRover(2, 2, "N");
+
+            var result = rover.ExecuteCommand("b.1");
+
+            result.Should().Be("2,3");
+        }
     }
 }
