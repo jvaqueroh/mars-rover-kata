@@ -31,6 +31,7 @@ public class MarsRover
             return GetPosition();
         }
 
-        return "2,3";
+        y++;
+        return GetPosition();
     }
 }
