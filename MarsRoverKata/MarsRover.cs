@@ -25,6 +25,9 @@ public class MarsRover
 
     public string ExecuteCommand(string command)
     {
-        return "2,1";
+        if(command.StartsWith("f"))
+            return "2,1";
+
+        return "2,3";
     }
 }
