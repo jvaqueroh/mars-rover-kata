@@ -3,7 +3,7 @@ namespace MarsRoverKata;
 public class MarsRover
 {
     private readonly int x;
-    private readonly int y;
+    private int y;
     private readonly string direction;
 
     public MarsRover(int x, int y, string direction)
@@ -25,8 +25,11 @@ public class MarsRover
 
     public string ExecuteCommand(string command)
     {
-        if(command.StartsWith("f"))
-            return "2,1";
+        if (command.StartsWith("f"))
+        {
+            y--;
+            return GetPosition();
+        }
 
         return "2,3";
     }
